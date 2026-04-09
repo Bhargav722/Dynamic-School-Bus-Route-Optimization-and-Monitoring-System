@@ -56,19 +56,17 @@ Traditional school transportation systems use fixed routes and static schedules 
 
 ```bash
 cd backend
-python -m venv venv
-source venv/bin/activate        # Windows: venv\Scripts\activate
-pip install -r requirements.txt
+npm install
 
-cp .env.example .env
-# Edit .env with your PostgreSQL credentials
+PORT=5000
+MONGO_URI=your_mongodb_uri
+JWT_SECRET=your_secret
 
-alembic upgrade head             # Run migrations
-uvicorn app.main:app --reload    # Start server
+npm run dev
 ```
 
-API will be live at: `http://localhost:8000`
-Interactive docs at: `http://localhost:8000/docs`
+API will be live at: `http://localhost:5000`
+Interactive docs at: `http://localhost:5000/docs`
 
 ### Frontend Setup
 
